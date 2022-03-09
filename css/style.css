@@ -15,7 +15,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid var(--black);
+    /*border: 1px solid var(--black);*/
 }
 
 html {
@@ -23,18 +23,21 @@ html {
 }
 
 body {
-    margin: 60px 50px;
+    /*margin: 50px 50px;*/
+    margin: 0 auto;
     background-color: var(--dark);
     font-family: Poppins, sans-serif;
+    max-width: 50%;
 }
 
 .container-main {
     background-color: var(--medium);
     border: 5px solid var(--black);
+    margin-top: 25px;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     font-family: Chewy, sans-serif;
     color: var(--black);
@@ -50,6 +53,7 @@ h1 {
     justify-content: center;
     align-items: center;
     /*margin: 20px;*/
+    margin-bottom: 5px;
 }
 
 .form-select-option {
@@ -69,7 +73,7 @@ h1 {
 
 .form-select-box {
     border: 3px solid var(--dark);
-    width: 25%;
+    width: 80%;
 }
 
 .form-select-drop {
@@ -90,11 +94,8 @@ h1 {
 }
 
 .form-search-bar {
-    /*background-color: var(--medium);*/
-    /*    margin: 20px;*/
-    /*background-color: black*/
     border: 3px solid var(--dark);
-    width: 25%;
+    width: 80%;
 }
 
 /* END SEARCH BAR */
@@ -108,7 +109,7 @@ h1 {
 }
 
 .coffee-name {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin-left: 15px;
     margin-right: 15px;
     font-family: Poppins, sans-serif;
@@ -121,59 +122,44 @@ h1 {
     display: flex;
     justify-content: center;
 
-    font-size: 1rem;
-    margin-top: -16px;
+    font-size: .8rem;
+    margin-top: -12px;
     margin-left: 35px;
     color: var(--light);
-
     font-family: Chewy, Poppins, sans-serif;
-
 }
 
 /* END COFFEE DISPLAY
 
-.centered {
-    /*position: fixed;*/
-/*top: 50%;*/
-/*left: 50%;*/
-/*transform: translate(-50%, -50%);*/
-/*}*/
-
-/* BEGIN GRID BORDERS */
-.container-dev {
-    /*border: solid 1px green;*/
-}
-
-.row-dev {
-    /*border: solid 3px red;*/
-}
-
-.col-dev {
-    /*border: dotted 3px blue;*/
-}
-
-/* END GRID BORDERS */
-/* END DEV PROPERTIES */
-
-
-/* extra small and down - phones */
-@media only screen and (max-width: 600px) {
-    /*#coffees {*/
-    /*    border: red 2px solid;*/
-    /*}*/
-}
 
 /* small and up - large phones and tablets */
 @media only screen and (min-width: 600px) {
 
+    h1 {
+        font-size: 4rem;
+    }
+
+    .coffee-name {
+        font-size: 1.5rem;
+        color: var(--black);
+    }
+
+
+    .coffee-roast {
+        font-size: 1rem;
+        margin-top: -16px;
+        color: var(--light);
+    }
 }
 
 /* medium and up */
 @media only screen and (min-width: 768px) {
+    .form-select-box {
+        width: 45%;
+    }
 
-}
+    .form-search-bar {
 
-/* large and up */
-@media only screen and (min-width: 992px) {
-
+        width: 45%;
+    }
 }
