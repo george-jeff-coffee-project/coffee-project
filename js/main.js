@@ -51,13 +51,26 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
 // Grabs
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var searchBar = document.querySelector('#searchBar');
 
-tbody.innerHTML = renderCoffees(coffees);
-submitButton.addEventListener('click', updateCoffees);
+let roastOption = document.querySelector('.form-select-option')
 
+tbody.innerHTML = renderCoffees(coffees);
+
+// submitButton.addEventListener('click', updateCoffees);
+roastOption.addEventListener('onchange', updateCoffees);
+//
 searchBar.addEventListener('keyup', updateCoffees);
+
+
+
+
+// document.querySelector('.form-select-roast').onchange = function() {
+//     console.log("onchange working");
+//     updateCoffees();
+// }

@@ -14,7 +14,7 @@
 
 /* BEGIN DEV PROPERTIES */
 * {
-    border: 1px solid var(--black);
+    /*border: 1px solid var(--black);*/
 }
 
 
@@ -29,32 +29,30 @@ html {
 }
 
 body {
-    margin: 20px;
+    margin: 60px 50px;
+    background-color: var(--dark);
 }
 
 .container-main {
-    backgr/
+    background-color: var(--medium);
 }
 
+/* returnreturn - probably remove */
 .container-sub {
-    background-color: var(--light);
+    /*background-color: var(--light);*/
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
 }
 
-.coffee-name {
-   /*background-color: */
-}
-
+/* BEGIN ROAST SELECTION */
 .coffee-roast {
 
    /*background-color: */
 }
 
-/* BEGIN ROAST SELECTION */
 .form-select-roast {
             display: flex;
 justify-content: center;
@@ -64,7 +62,9 @@ justify-content: center;
 }
 
 .form-select-option {
+
     /*background-color: var(--medium);*/
+
 }
 
 .form-select-button {
@@ -75,7 +75,12 @@ justify-content: center;
 }
 
 .form-select-roast {
+     /*border: 3px solid red;*/
     /*background-color: var(--medium);*/
+}
+
+.form-select-box {
+    border: 3px solid var(--dark);
 }
 
 .form-select-drop {
@@ -84,10 +89,15 @@ justify-content: center;
 /* END ROAST SELECTION */
 
 /* BEGIN SEARCH BAR */
+.form-search {
+    display: flex;
+    justify-content: center;
+}
 .form-search-bar {
 /*background-color: var(--medium);*/
     margin: 20px;
     /*background-color: black*/
+    border: 3px solid var(--dark);
 }
 /* END SEARCH BAR */
 
@@ -106,6 +116,8 @@ justify-content: center;
 .coffee-roast {
     display: flex;
     justify-content: end;
+
+    color: var(--light);
 }
 
 /* END COFFEE DISPLAY
