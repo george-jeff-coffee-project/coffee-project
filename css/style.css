@@ -5,20 +5,117 @@
     --white: #FFFFFF;
     --black: #000000;
 
+    --dark: #1f0000; /* dark brown */
+    --medium: #835c3b; /* medium brown */
+    --light: #ffebcd; /* light - blanched almond */
+
 
 }
 
 /* BEGIN DEV PROPERTIES */
 * {
-    /*border: 1px solid var(--black);*/
+    border: 1px solid var(--black);
 }
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 20px;
+}
+
+.container-main {
+    backgr/
+}
+
+.container-sub {
+    background-color: var(--light);
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.coffee-name {
+   /*background-color: */
+}
+
+.coffee-roast {
+
+   /*background-color: */
+}
+
+/* BEGIN ROAST SELECTION */
+.form-select-roast {
+            display: flex;
+justify-content: center;
+    align-items: center;
+    /*background-color: var(--medium);*/
+    margin: 20px;
+}
+
+.form-select-option {
+    /*background-color: var(--medium);*/
+}
+
+.form-select-button {
+
+    background-color: var(--medium);
+    height: 50px;
+    margin-left: 5px;
+}
+
+.form-select-roast {
+    /*background-color: var(--medium);*/
+}
+
+.form-select-drop {
+    background-color: var(--medium);
+}
+/* END ROAST SELECTION */
+
+/* BEGIN SEARCH BAR */
+.form-search-bar {
+/*background-color: var(--medium);*/
+    margin: 20px;
+    /*background-color: black*/
+}
+/* END SEARCH BAR */
+
+/* BEGIN COFFEE DISPLAY */
+.coffee-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*background-color: black;*/
+}
+
+.coffee-name {
+
+}
+
+.coffee-roast {
+    display: flex;
+    justify-content: end;
+}
+
+/* END COFFEE DISPLAY
 
 .centered {
     /*position: fixed;*/
     /*top: 50%;*/
     /*left: 50%;*/
     /*transform: translate(-50%, -50%);*/
-}
+/*}*/
 
 /* BEGIN GRID BORDERS */
 .container-dev {
@@ -36,22 +133,14 @@
 /* END GRID BORDERS */
 /* END DEV PROPERTIES */
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-html {
-    font-size: 16px;
-}
 
 
 /* extra small and down - phones */
 @media only screen and (max-width: 600px) {
-#coffees {
-    border: red 2px solid;
-}
+    /*#coffees {*/
+    /*    border: red 2px solid;*/
+    /*}*/
 }
 
 /* small and up - large phones and tablets */

@@ -2,9 +2,9 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<div>' + coffee.name + '</div>';
-    html += '<p>' + coffee.roast + '</p>';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<div class="coffee-name">' + coffee.name + '</div>';
+    html += '<p class="coffee-roast">' + coffee.roast + '</p>';
     html += '</div>';
     return html;
 }

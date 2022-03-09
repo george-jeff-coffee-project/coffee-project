@@ -10,45 +10,49 @@
 
 </head>
 <body>
-<h1>Coffee!</h1>
+<div class="container-fluid container-main">
+    <div class="container-sub">
+        <h1>Coffee!</h1>
 
-<!--    ROAST SELECTOR    -->
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>All</option>
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <input id="submit" type="submit"/>
-</form>
+        <!--    ROAST SELECTOR    -->
+        <form class="form-select-roast">
+            <label for="roast-selection" class="form-select-drop"></label>
+            <select id="roast-selection" class="form-select-roast">
+                <option class="form-select-option">All</option>
+                <option class="form-select-option">light</option>
+                <option class="form-select-option">medium</option>
+                <option class="form-select-option">dark</option>
+            </select>
+            <input id="submit" type="submit" class="form-select-button">
+        </form>
 
-<!--    SEARCH BAR   -->
-<div class="input-group">
-    <div class="form-outline">
-        <input type="search" id="searchBar" class="form-control"/>
-        <label class="form-label" for="searchBar">Search</label>
+        <!--    SEARCH BAR   -->
+<!--        <div>-->
+            <div>
+                <input type="search" id="searchBar" class="form-search-bar">
+                <label for="searchBar"></label>
+            </div>
+<!--        </div>-->
+
+        COFFEE DISPLAY
+        <div id="coffees" class="coffee-display">
+            <!--<table>-->
+            <!--    <thead>-->
+            <!--    <tr>-->
+            <!--        <th>ID</th>-->
+            <!--        <th>NAME</th>-->
+            <!--        <th>ROAST</th>-->
+            <!--    </tr>-->
+            <!--    </thead>-->
+            <!--    <tbody id="coffees"></tbody>-->
+            <!--</table>-->
+        </div>
+
+        <script defer src="js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
     </div>
 </div>
-
-<!--   COFFEE DISPLAY   -->
-<!--<div id="coffees">-->
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>NAME</th>
-        <th>ROAST</th>
-    </tr>
-    </thead>
-            <tbody id="coffees"></tbody>
-</table>
-<!--</div>-->
-
-<script defer src="js/main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
 </body>
 </html>
