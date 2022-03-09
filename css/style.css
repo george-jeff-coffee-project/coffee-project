@@ -21,7 +21,6 @@ html {
 }
 
 body {
-    /*margin: 50px 50px;*/
     margin: 0 auto;
     background-color: var(--dark);
     font-family: Poppins, sans-serif;
