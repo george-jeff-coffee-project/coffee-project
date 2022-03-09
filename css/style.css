@@ -25,7 +25,7 @@ body {
     margin: 0 auto;
     background-color: var(--dark);
     font-family: Poppins, sans-serif;
-    max-width: 50%;
+    max-width: 90%;
 }
 
 .container-main {
@@ -58,7 +58,6 @@ h1 {
 .form-select-option {
     background-color: var(--light);
     font-family: poppins, sans-serif;
-
 }
 
 .form-select-button {
@@ -74,7 +73,7 @@ h1 {
 
 .form-select-box {
     border: 3px solid var(--dark);
-    width: 80%;
+    width: 60%;
     background-color: var(--light);
 }
 
@@ -93,7 +92,7 @@ h1 {
 
 .form-search-bar {
     border: 3px solid var(--dark);
-    width: 80%;
+    width: 60%;
     background-color: var(--light);
 }
 
@@ -134,6 +133,9 @@ h1 {
 /* small and up - large phones and tablets */
 @media only screen and (min-width: 600px) {
 
+    body {
+        max-width: 60%;
+    }
     h1 {
         font-size: 4rem;
     }
@@ -158,5 +160,12 @@ h1 {
 
     .form-search-bar {
         width: 45%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body {
+        max-width: 40%;
     }
 }
