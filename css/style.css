@@ -49,7 +49,9 @@ html {
 
 /* extra small and down - phones */
 @media only screen and (max-width: 600px) {
-
+#coffees {
+    border: red 2px solid;
+}
 }
 
 /* small and up - large phones and tablets */

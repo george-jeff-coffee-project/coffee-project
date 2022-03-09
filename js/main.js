@@ -9,6 +9,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
+// displays coffees in order ascending
 function renderCoffees(coffees) {
     var html = '';
     for (var i = 0; i <= coffees.length - 1; i++) {
@@ -18,14 +19,15 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    var searchBar = document.querySelector('#searchBar').value;
-    // console.log(searchBar);
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     console.log(selectedRoast);
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (selectedRoast === 'All' && coffee.name.toLowerCase().includes(searchBar.value.toLowerCase())) {
+            filteredCoffees.push(coffee);
+        }
+        else if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchBar.value.toLowerCase())) {
             filteredCoffees.push(coffee);
         }
     });
@@ -49,10 +51,11 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
+// Grabs
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var searchBar = document.querySelector('#searchBar');
 
 tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
