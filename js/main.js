@@ -19,7 +19,7 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     console.log(selectedRoast);
     var filteredCoffees = [];
@@ -52,25 +52,23 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// Grabs
+// Grabs appropriate HTML element
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var searchBar = document.querySelector('#searchBar');
+var addCoffeeField = document.querySelector('#addCoffeeTxt').value;
+// var addedRoast = document.querySelector('#add-roast').value;
+console.log(addCoffeeField);
 
-let roastOption = document.querySelector('.form-select-option')
-
+// Event Listeners
 tbody.innerHTML = renderCoffees(coffees);
-
-// submitButton.addEventListener('click', updateCoffees);
-roastOption.addEventListener('onchange', updateCoffees);
-//
 searchBar.addEventListener('keyup', updateCoffees);
+// addCoffeeField.addEventListener('click', addCoffee);
+// addedRoast.addEventListener('click', addCoffee);
 
-
-
-
-// document.querySelector('.form-select-roast').onchange = function() {
-//     console.log("onchange working");
-//     updateCoffees();
+// var addCoffee = function() {
+//     // e.preventDefault();
+//     console.log(addCoffeeField, addedRoast);
 // }
+
