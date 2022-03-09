@@ -25,13 +25,13 @@ body {
     margin: 0 auto;
     background-color: var(--dark);
     font-family: Poppins, sans-serif;
-    max-width: 90%;
+    max-width: 95%;
 }
 
 .container-main {
     background-color: var(--medium);
     border: 8px solid var(--black);
-    margin-top: 25px;
+    margin-top: 10px;
     min-height: 55vh;
 }
 
@@ -132,10 +132,15 @@ h1 {
 
 /* small and up - large phones and tablets */
 @media only screen and (min-width: 600px) {
-
     body {
         max-width: 60%;
     }
+
+    .container-main {
+        margin-top: 25px;
+        min-height: 55vh;
+    }
+
     h1 {
         font-size: 4rem;
     }
@@ -154,6 +159,10 @@ h1 {
 
 /* medium and up */
 @media only screen and (min-width: 768px) {
+    body {
+        max-width: 50%;
+    }
+
     .form-select-box {
         width: 45%;
     }
