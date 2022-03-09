@@ -1,5 +1,4 @@
-/* @import url('https://fonts.googleapis.com/'); */
-/* https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --white: #FFFFFF;
@@ -12,16 +11,11 @@
 
 }
 
-/* BEGIN DEV PROPERTIES */
-* {
-    /*border: 1px solid var(--black);*/
-}
-
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    border: 1px solid var(--black);
 }
 
 html {
@@ -31,74 +25,78 @@ html {
 body {
     margin: 60px 50px;
     background-color: var(--dark);
+    font-family: Poppins, sans-serif;
 }
 
 .container-main {
     background-color: var(--medium);
-}
-
-/* returnreturn - probably remove */
-.container-sub {
-    /*background-color: var(--light);*/
+    border: 5px solid var(--black);
 }
 
 h1 {
     font-size: 4rem;
     text-align: center;
+    font-family: Chewy, sans-serif;
+    color: var(--black);
 }
 
 /* BEGIN ROAST SELECTION */
 .coffee-roast {
-
-   /*background-color: */
+    /*background-color: */
 }
 
 .form-select-roast {
-            display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    /*background-color: var(--medium);*/
-    margin: 20px;
+    /*margin: 20px;*/
 }
 
 .form-select-option {
-
     /*background-color: var(--medium);*/
-
 }
 
 .form-select-button {
-
     background-color: var(--medium);
     height: 50px;
     margin-left: 5px;
 }
 
 .form-select-roast {
-     /*border: 3px solid red;*/
+    /*border: 3px solid red;*/
     /*background-color: var(--medium);*/
 }
 
 .form-select-box {
     border: 3px solid var(--dark);
+    width: 25%;
 }
 
 .form-select-drop {
-    background-color: var(--medium);
+    /*background-color: var(--medium);*/
 }
+
+.form-select-button {
+    display: none;
+}
+
 /* END ROAST SELECTION */
 
 /* BEGIN SEARCH BAR */
 .form-search {
     display: flex;
     justify-content: center;
+
 }
+
 .form-search-bar {
-/*background-color: var(--medium);*/
-    margin: 20px;
+    /*background-color: var(--medium);*/
+    /*    margin: 20px;*/
     /*background-color: black*/
     border: 3px solid var(--dark);
+    width: 25%;
 }
+
 /* END SEARCH BAR */
 
 /* BEGIN COFFEE DISPLAY */
@@ -106,27 +104,39 @@ justify-content: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /*background-color: black;*/
+    margin-top: 20px;
 }
 
 .coffee-name {
-
+    font-size: 1.5rem;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: Poppins, sans-serif;
+    font-weight: 900;
+    color: var(--black);
 }
 
 .coffee-roast {
+    position: relative;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 
+    font-size: 1rem;
+    margin-top: -16px;
+    margin-left: 35px;
     color: var(--light);
+
+    font-family: Chewy, Poppins, sans-serif;
+
 }
 
 /* END COFFEE DISPLAY
 
 .centered {
     /*position: fixed;*/
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*transform: translate(-50%, -50%);*/
+/*top: 50%;*/
+/*left: 50%;*/
+/*transform: translate(-50%, -50%);*/
 /*}*/
 
 /* BEGIN GRID BORDERS */
@@ -144,8 +154,6 @@ justify-content: center;
 
 /* END GRID BORDERS */
 /* END DEV PROPERTIES */
-
-
 
 
 /* extra small and down - phones */
