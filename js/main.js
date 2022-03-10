@@ -30,6 +30,7 @@ var addCoffee = function (e) {
     }
     coffees.push(addedCoffeeObj);
     updateCoffees();
+    addCoffeeTxt.value = '';
 }
 
 function updateCoffees(e) {
@@ -79,6 +80,3 @@ var addRoast = document.querySelector('#add-roast');
 tbody.innerHTML = renderCoffees(coffees);
 searchBar.addEventListener('keyup', updateCoffees);
 addCoffeeBtn.addEventListener('click', addCoffee);
-
-
-
