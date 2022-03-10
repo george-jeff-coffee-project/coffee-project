@@ -1,15 +1,16 @@
-"use strict"
+"use strict";
+
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<div class="coffee-name">' + coffee.name + '</div>';
-    html += '<div class="coffee-roast">' + coffee.roast + '</div>';
+    html += '<p class="coffee-roast">' + coffee.roast + '</p>';
     html += '</div>';
     return html;
 }
 
-// displays coffees in order ascending
+// displays coffees in ascending order
 function renderCoffees(coffees) {
     var html = '';
     for (var i = 0; i <= coffees.length - 1; i++) {
@@ -17,11 +18,24 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+// Adds new Coffee per user input
+var addCoffee = function (e) {
+    e.preventDefault();
+    var coffeeName = addCoffeeField.value;
+    var coffeeRoast = addRoast.value;
+    var newId = coffees.length + 1;
+    var addedCoffeeObj = {
+        id: newId,
+        name: coffeeName,
+        roast: coffeeRoast
+    }
+    coffees.push(addedCoffeeObj);
+    updateCoffees();
+}
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    console.log(selectedRoast);
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (selectedRoast === 'All' && coffee.name.toLowerCase().includes(searchBar.value.toLowerCase())) {
@@ -52,25 +66,20 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// Grabs
+
+// Grabs appropriate HTML element
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var searchBar = document.querySelector('#searchBar');
+var addCoffeeField = document.querySelector('#addCoffeeTxt');
+var addCoffeeBtn = document.querySelector('#submitCoffeeName');
+var addRoast = document.querySelector('#add-roast');
 
-let roastOption = document.querySelector('.form-select-option')
-
+// Event Listeners
 tbody.innerHTML = renderCoffees(coffees);
-
-// submitButton.addEventListener('click', updateCoffees);
-roastOption.addEventListener('onchange', updateCoffees);
-//
 searchBar.addEventListener('keyup', updateCoffees);
+addCoffeeBtn.addEventListener('click', addCoffee);
 
 
 
-
-// document.querySelector('.form-select-roast').onchange = function() {
-//     console.log("onchange working");
-//     updateCoffees();
-// }
